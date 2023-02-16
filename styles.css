@@ -1,0 +1,162 @@
+:root{
+    --font-size:48pt;
+}
+
+body{
+    font-family: "sculpin", sans-serif;
+    font-size: var(--font-size);
+    overflow-x: hidden;
+    object-fit: cover;
+}
+
+.background-1{
+    position: fixed;
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
+}
+ .background-2 { 
+    position: fixed;
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
+    opacity: 0;
+    transition: all 1s;
+}
+.background-2.show{
+    opacity: 100;
+    transition: all 1s;
+}
+
+
+
+main{
+    padding: var(--font-size);
+    overflow-x: hidden;
+    
+}
+
+.h-rule{
+    mix-blend-mode: difference;
+    filter:invert(100%);
+    height: 2pt;
+    width: 100%;
+    background: black;
+    margin-bottom: 2em;
+    opacity: 0;
+    transition: all 1s ease-in-out;
+
+    
+}
+.h-rule.show{
+    opacity: 100;
+    transition: all 1s ease-in-out;
+}
+
+
+.deckard{
+    mix-blend-mode: difference;
+    filter:invert(100%);
+    margin-bottom: 2em;
+
+    font-weight: 900;
+    font-style: normal;
+    text-align: right;
+    font-size: calc(1 * var(--font-size));
+    transform: translateX(200px);
+    opacity: 0%;
+    transition: all 1s ease-in-out;
+}
+
+.deckard.show{
+    transform: translateX(0px);
+    opacity: 100%;
+    transition: all 1s ease-in-out;
+}
+
+.rachel{
+    mix-blend-mode: difference;
+    filter:invert(100%);
+    margin-bottom: 2em;
+
+    font-weight: 400;
+    font-style: normal;
+    transform: translateX(-200px);
+    opacity: 0%;
+    transition: all 1s ease-in-out;
+}
+
+.rachel.show{
+    transform: translateX(0px);
+    opacity: 100%;
+    transition: all 1s ease-in-out;
+}
+.rachel-top{
+    mix-blend-mode: difference;
+    filter:invert(100%);
+    margin-bottom: 2em;
+
+    font-weight: 400;
+    font-style: normal;
+
+
+}
+.tyrell{
+    position: relative;
+    mix-blend-mode: difference;
+    filter:invert(100%);
+    margin-bottom: 2em;
+    font-weight: 400;
+    font-style: italic;
+    text-align: center;
+    width: 50%;
+    margin-right: auto;
+    margin-left: auto;
+    opacity: 0%;
+    transition: opacity 1s ease-in-out;
+}
+.tyrell.show{
+    opacity: 100%;
+    transition: opacity 1s ease-in-out;
+}
+.tyrell-conclusion{
+    mix-blend-mode: difference;
+    filter:invert(100%);
+    margin-bottom: calc(2 * var(--font-size));
+
+    font-weight: 400;
+    font-style: italic;
+    text-align: left;
+    font-size: calc(0.375 * var(--font-size));
+
+    width: 50%;
+    margin-right: auto;
+    margin-left: auto;
+
+    opacity: 0%;
+    transition: opacity 1s ease-in-out;
+}
+.tyrell-conclusion.show{
+
+    transform: translateY(0px);
+    opacity: 100%;
+    transition: opacity 1s ease-in-out;
+}
+
+.deckard-conclusion{
+    mix-blend-mode: difference;
+    filter:invert(100%);
+
+    font-weight: 900;
+    font-style: normal;
+    text-align: right;
+    font-size: calc(2 * var(--font-size));
+    transform: translateX(200px);
+    opacity: 0%;
+    transition: all 1s ease-in-out;
+}
+.deckard-conclusion.show{
+    transform: translatey(0px);
+    opacity: 100%;
+    transition: all 1s ease-in-out;
+}
