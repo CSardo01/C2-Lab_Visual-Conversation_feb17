@@ -15,14 +15,14 @@ body {
 
 .background-1 {
     position: fixed;
-    height: 100%;
+    height: 150%;
     width: 100%;
     object-fit: cover;
 }
 
 .background-2 {
     position: fixed;
-    height: 100%;
+    height: 150%;
     width: 100%;
     object-fit: cover;
     opacity: 0;
@@ -65,12 +65,8 @@ header,footer{
 }
 
 .unicorn-down.show {
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    width: 20%;
-    height: auto;
-    mix-blend-mode: difference;
+    transition: opacity 1s linear;
+    transition-delay: 1s;
     opacity: 100%;
 
     transform: translateX(-50%) translatey(-50%) rotate(0deg);
@@ -119,7 +115,6 @@ header,footer{
     font-weight: 900;
     font-style: normal;
     text-align: right;
-    font-size: calc(1 * var(--font-size));
     transform: translateX(200px);
     opacity: 0%;
     transition: all 1s ease-in-out;
@@ -226,15 +221,12 @@ header,footer{
 .unicorn-up {
     position: absolute;
     transition: opacity 1s linear;
-
     top: 50%;
     left: 50%;
     width: 20%;
     height: auto;
-
     mix-blend-mode: difference;
     opacity: 0%;
-
     transform: translateX(-50%) translatey(-50%) rotate(0deg);
     /* animation: bounce 1.5s ease-in-out infinite; */
 }
@@ -242,19 +234,32 @@ header,footer{
 .unicorn-up.show {
     transition: opacity 1s linear;
     transition-delay: 1s;
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    width: 20%;
-    height: auto;
-    mix-blend-mode: difference;
     opacity: 100%;
-
-    transform: translateX(-50%) translatey(-50%) rotate(0deg);
-    /* animation: bounce 1.5s ease-in-out infinite; */
-
 }
 .unicorn-up.show:hover{
     animation: bounce 1.5s ease-in-out infinite;
 
+}
+@media screen and (max-width:700px) {
+    body {
+    font-size: calc(0.5 * var(--font-size));
+    }
+    main{
+        padding: calc(0.5 * var(--font-size));
+    }
+    .tyrell-conclusion {
+        font-size: calc(0.375 * var(--font-size));
+        width: 75%;
+
+    }
+    .deckard-conclusion {
+        font-size: calc(1 * var(--font-size));
+    }
+    .unicorn-down{
+        width: 25%;
+    }
+    .unicorn-up{
+        width: 50%;
+    }
+    
 }
