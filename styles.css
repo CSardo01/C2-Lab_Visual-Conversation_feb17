@@ -14,7 +14,7 @@ body {
     object-fit: cover;
 }
 
-.background-1 {
+.background-1, .background-2 {
     position: fixed;
     height: 100vh;
     width: 100vw;
@@ -23,11 +23,6 @@ body {
 }
 
 .background-2 {
-    position: fixed;
-    height: 100vh;
-    width: 100vw;
-    top: 0;
-    object-fit: cover;
     opacity: 0;
     transition: all 1s;
 }
@@ -54,7 +49,7 @@ footer {
     position: relative;
 }
 
-.unicorn-down {
+.unicorn-down,.unicorn-up {
     transition: opacity 1s linear;
     position: absolute;
     top: 50%;
@@ -68,7 +63,7 @@ footer {
     animation: bounce 1.5s ease-in-out infinite;
 }
 
-.unicorn-down.show {
+.unicorn-down.show, .unicorn-up.show {
     transition: opacity 1s linear;
     transition-delay: 1s;
     opacity: 100%;
@@ -129,7 +124,7 @@ footer {
     transition: all 1s ease-in-out;
 }
 
-.rachel {
+.rachel, .rachel-top{
     mix-blend-mode: difference;
     filter: invert(100%);
     margin-bottom: 2em;
@@ -141,7 +136,7 @@ footer {
     transition: all 1s ease-in-out;
 }
 
-.rachel.show {
+.rachel.show, .rachel-top.show{
     transform: translateX(0px);
     opacity: 100%;
     transition: all 1s ease-in-out;
@@ -221,33 +216,7 @@ footer {
     transition: all 1s ease-in-out;
 }
 
-.unicorn-up {
-    position: absolute;
-    transition: opacity 1s linear;
-    top: 50%;
-    left: 50%;
-    width: 20%;
-    height: auto;
-    mix-blend-mode: difference;
-    opacity: 0%;
 
-    transform: translateX(-50%) translatey(-50%) rotate(0deg);
-}
-
-.unicorn-up.show {
-    transition: opacity 1s linear;
-    transition-delay: 1s;
-    opacity: 100%;
-    mix-blend-mode: difference;
-
-}
-
-.unicorn-up.show:hover {
-    animation: bounce 1.5s ease-in-out infinite;
-    mix-blend-mode: difference;
-
-
-}
 
 @media screen and (max-width:700px) {
     body {
