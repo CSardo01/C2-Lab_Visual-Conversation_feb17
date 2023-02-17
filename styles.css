@@ -1,21 +1,26 @@
-:root{
-    --font-size:48pt;
+:root {
+    --font-size: 48pt;
 }
 
-body{
+::-webkit-scrollbar {
+    display: none;
+}
+
+body {
     font-family: "sculpin", sans-serif;
     font-size: var(--font-size);
     overflow-x: hidden;
     object-fit: cover;
 }
 
-.background-1{
+.background-1 {
     position: fixed;
     height: 100%;
     width: 100%;
     object-fit: cover;
 }
- .background-2 { 
+
+.background-2 {
     position: fixed;
     height: 100%;
     width: 100%;
@@ -23,22 +28,73 @@ body{
     opacity: 0;
     transition: all 1s;
 }
-.background-2.show{
+
+.background-2.show {
     opacity: 100;
     transition: all 1s;
 }
 
 
 
-main{
+
+
+main {
     padding: var(--font-size);
     overflow-x: hidden;
-    
+
 }
 
-.h-rule{
+header,footer{
+    width: 100%;
+    height: 100vh;
+    position: relative;
+}
+
+.unicorn-down {
+    transition: opacity 1s linear;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 25%;
+    height: auto;
     mix-blend-mode: difference;
-    filter:invert(100%);
+    opacity: 0%;
+
+    transform: translateX(-50%) translatey(-50%) rotate(0deg);
+    animation: bounce 1.5s ease-in-out infinite;
+}
+
+.unicorn-down.show {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 25%;
+    height: auto;
+    mix-blend-mode: difference;
+    opacity: 100%;
+
+    transform: translateX(-50%) translatey(-50%) rotate(0deg);
+    animation: bounce 1.5s ease-in-out infinite;
+
+}
+
+@keyframes bounce {
+    0% {
+        transform: translateX(-50%) translateY(-50%)
+    }
+
+    50% {
+        transform: translateX(-50%) translateY(-60%)
+    }
+
+    100% {
+        transform: translateX(-50%) translateY(-50%)
+    }
+}
+
+.h-rule {
+    mix-blend-mode: difference;
+    filter: invert(100%);
     height: 2pt;
     width: 100%;
     background: black;
@@ -46,17 +102,18 @@ main{
     opacity: 0;
     transition: all 1s ease-in-out;
 
-    
+
 }
-.h-rule.show{
+
+.h-rule.show {
     opacity: 100;
     transition: all 1s ease-in-out;
 }
 
 
-.deckard{
+.deckard {
     mix-blend-mode: difference;
-    filter:invert(100%);
+    filter: invert(100%);
     margin-bottom: 2em;
 
     font-weight: 900;
@@ -68,15 +125,15 @@ main{
     transition: all 1s ease-in-out;
 }
 
-.deckard.show{
+.deckard.show {
     transform: translateX(0px);
     opacity: 100%;
     transition: all 1s ease-in-out;
 }
 
-.rachel{
+.rachel {
     mix-blend-mode: difference;
-    filter:invert(100%);
+    filter: invert(100%);
     margin-bottom: 2em;
 
     font-weight: 400;
@@ -86,14 +143,15 @@ main{
     transition: all 1s ease-in-out;
 }
 
-.rachel.show{
+.rachel.show {
     transform: translateX(0px);
     opacity: 100%;
     transition: all 1s ease-in-out;
 }
-.rachel-top{
+
+.rachel-top {
     mix-blend-mode: difference;
-    filter:invert(100%);
+    filter: invert(100%);
     margin-bottom: 2em;
 
     font-weight: 400;
@@ -101,10 +159,11 @@ main{
 
 
 }
-.tyrell{
+
+.tyrell {
     position: relative;
     mix-blend-mode: difference;
-    filter:invert(100%);
+    filter: invert(100%);
     margin-bottom: 2em;
     font-weight: 400;
     font-style: italic;
@@ -115,18 +174,20 @@ main{
     opacity: 0%;
     transition: opacity 1s ease-in-out;
 }
-.tyrell.show{
+
+.tyrell.show {
     opacity: 100%;
     transition: opacity 1s ease-in-out;
 }
-.tyrell-conclusion{
+
+.tyrell-conclusion {
     mix-blend-mode: difference;
-    filter:invert(100%);
+    filter: invert(100%);
     margin-bottom: calc(2 * var(--font-size));
 
     font-weight: 400;
     font-style: italic;
-    text-align: left;
+    text-align: center;
     font-size: calc(0.375 * var(--font-size));
 
     width: 50%;
@@ -136,17 +197,17 @@ main{
     opacity: 0%;
     transition: opacity 1s ease-in-out;
 }
-.tyrell-conclusion.show{
+
+.tyrell-conclusion.show {
 
     transform: translateY(0px);
     opacity: 100%;
     transition: opacity 1s ease-in-out;
 }
 
-.deckard-conclusion{
+.deckard-conclusion {
     mix-blend-mode: difference;
-    filter:invert(100%);
-
+    filter: invert(100%);
     font-weight: 900;
     font-style: normal;
     text-align: right;
@@ -155,8 +216,42 @@ main{
     opacity: 0%;
     transition: all 1s ease-in-out;
 }
-.deckard-conclusion.show{
+
+.deckard-conclusion.show {
     transform: translatey(0px);
     opacity: 100%;
     transition: all 1s ease-in-out;
+}
+
+.unicorn-up {
+    transition: opacity 1s linear;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 25%;
+    height: auto;
+
+    mix-blend-mode: difference;
+    opacity: 0%;
+
+    transform: translateX(-50%) translatey(-50%) rotate(0deg);
+    /* animation: bounce 1.5s ease-in-out infinite; */
+}
+
+.unicorn-up.show {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 25%;
+    height: auto;
+    mix-blend-mode: difference;
+    opacity: 100%;
+
+    transform: translateX(-50%) translatey(-50%) rotate(0deg);
+    /* animation: bounce 1.5s ease-in-out infinite; */
+
+}
+.unicorn-up.show:hover{
+    animation: bounce 1.5s ease-in-out infinite;
+
 }
