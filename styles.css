@@ -72,6 +72,8 @@ footer {
     transition: opacity 1s linear;
     transition-delay: 1s;
     opacity: 100%;
+    mix-blend-mode: difference;
+
 
 }
 
@@ -228,6 +230,7 @@ footer {
     height: auto;
     mix-blend-mode: difference;
     opacity: 0%;
+
     transform: translateX(-50%) translatey(-50%) rotate(0deg);
 }
 
@@ -235,10 +238,14 @@ footer {
     transition: opacity 1s linear;
     transition-delay: 1s;
     opacity: 100%;
+    mix-blend-mode: difference;
+
 }
 
 .unicorn-up.show:hover {
     animation: bounce 1.5s ease-in-out infinite;
+    mix-blend-mode: difference;
+
 
 }
 
